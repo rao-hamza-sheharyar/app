@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: school_management_development_db
+
+test:
+  <<: *default
+  database: school_management_test_db
+
+production:
+  <<: *default
+  database: school_management_production_db
